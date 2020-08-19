@@ -1,0 +1,14 @@
+{
+  "name": "earlyvoting",
+  "version": "1.0.0",
+  "description": "EVoting Locations",
+  "main": "voting.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diane Reeves",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.0"
+  }
+}
