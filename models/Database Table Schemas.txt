@@ -1,0 +1,18 @@
+User
+-------------------------------------------------
+id      name        password        email            
+1       John        ajsdfjasdfoj    john@john.com
+
+
+UserCategory
+----------------------------------
+user_id      category
+1            tech
+1            capentry
+2            tech
+2            interior design
+
+
+
+select category
+where user_id = 1

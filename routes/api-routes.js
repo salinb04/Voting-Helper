@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -48,6 +49,21 @@ module.exports = function(app) {
         email: req.user.email,
         id: req.user.id,
       });
+    }
+  });
+
+  // Update categories
+
+  // POST {categories: ["sports", "tech"]}
+
+  // Get categories
+  app.get("/api/categories", (req, res) => {
+    if (false) {
+      res.json({});
+    } else {
+      db.Category.findAll({ where: { user_id: 1 } }).then((result) =>
+        res.json(result)
+      );
     }
   });
 
