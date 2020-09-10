@@ -8,10 +8,10 @@ module.exports = function(app) {
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
-    res.json({
-      email: req.user.email,
-      id: req.user.id
-    });
+    if (req.user) {
+      res.redirect("/categories");
+    }
+    res.redirect("/login");
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -19,13 +19,13 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
     db.User.create({
-      email: req.body.email,
-      password: req.body.password
+      username: req.body.username,
+      password: req.body.password,
     })
       .then(() => {
-        res.redirect(307, "/api/login");
+        res.redirect("/login");
       })
-      .catch(err => {
+      .catch((err) => {
         res.status(401).json(err);
       });
   });
@@ -46,8 +46,12 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
+  });
+
+  app.use(function(req, res, next) {
+    res.status(404).send("Sorry can't find that!");
   });
 };
