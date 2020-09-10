@@ -80,7 +80,7 @@
                             <img class="card-img-top" src="images/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
                                 alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">HEADLINE NEWS <br>
+                                <p class="card-text">HEADLINE NEWS<br>
                                     <br>This is a wider card with supporting text below as a
                                     natural
                                     lead-in to additional content. This content is a little bit longer.</p>
@@ -88,7 +88,7 @@
                                     <div class="btn-group" id="btn-hd">
                                         <div class="onoffswitch1">
                                             <label class="container">On
-                                                <input type="checkbox" checked="checked">
+                                                <input name="headline" type="checkbox" checked="checked">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -111,7 +111,7 @@
                                     <div class="btn-group" id="btn-hd">
                                         <div class="onoffswitch1">
                                             <label class="container">On
-                                                <input type="checkbox" checked="checked">
+                                                <input name="state-local" type="checkbox" checked="checked">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -135,7 +135,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="world" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -156,7 +156,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="politics" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -170,17 +170,16 @@
                             <img class="card-img-top" src="images/markus-spiske-5gGcn2PRrtc-unsplash.jpg"
                                 alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">BUSINESS <br>
+                                <p class="card-text">BUSINESS<br>
                                     <br>This is a wider card with supporting text below as a natural
                                     lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="business" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -196,7 +195,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="health" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -217,7 +216,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="sports" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -237,11 +236,10 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="arts-entertainment" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -257,25 +255,20 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <label class="container">On
-                                            <input type="checkbox" checked="checked">
+                                            <input name="travel-style" type="checkbox" checked="checked">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <form action="../../success.html">
-                    <label for="appt">Select a time to receive your NEWS:</label>
-                    <input type="time" id="appt" name="appt">
-                    <input type="submit">
-                </form>
                 </p>
+                <button id="save" type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
+
 
     </main>
 
@@ -304,9 +297,11 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <!-- <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script> -->
+
+    <script src="js/categories.js"></script>
 </body>
 
 </html>

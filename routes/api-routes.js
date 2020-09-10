@@ -11,6 +11,12 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     if (req.user) {
       res.redirect("/categories");
+
+      // if(req.user.firstLogin) {
+      //   res.redirect("/categories");
+      // } else {
+      //   res.redirect("/members")
+      // }
     }
     res.redirect("/login");
   });
@@ -56,9 +62,25 @@ module.exports = function(app) {
 
   // POST {categories: ["sports", "tech"]}
 
-  // Get categories
+  // Set categories
+  app.post("/api/categories", (req, res) => {
+    if (!req.user) {
+      res.json({});
+    } else {
+      const categories = req.body.categories.map((category) => ({
+        user_id: req.user.id,
+        category,
+      }));
+
+      db.Category.bulkCreate(categories)
+        .then(() => res.redirect("/members"))
+        .catch(() => res.redirect("/categories"));
+    }
+  });
+
+  // get categories
   app.get("/api/categories", (req, res) => {
-    if (false) {
+    if (!req.user) {
       res.json({});
     } else {
       db.Category.findAll({ where: { user_id: 1 } }).then((result) =>
