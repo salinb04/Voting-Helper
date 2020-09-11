@@ -73,7 +73,7 @@ module.exports = function(app) {
       }));
 
       db.Category.bulkCreate(categories)
-        .then(() => res.redirect("/members"))
+        .then(() => res.redirect("/success"))
         .catch(() => res.redirect("/categories"));
     }
   });

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
 
     <title>Choose your News</title>
 
@@ -275,7 +274,9 @@
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
-                <a href="#">Back to top</a>
+                <div id="scroll-to-top-container">
+                   
+                </div>
             </p>
             <p>myNEWS &copy;</p>
 
@@ -300,8 +301,16 @@
     <!-- <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script> -->
+    
+    <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
 
     <script src="js/categories.js"></script>
+    <script src="js/back-to-top.js"></script>
 </body>
 
 </html>
