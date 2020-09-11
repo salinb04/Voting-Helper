@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script src="./js/runapi.js"></script>
 </head>
 
 <body>
@@ -22,16 +25,33 @@
                 receive as requested.</p>
         </div>
     </div>
+    <main class="row">
+        <div id="col1" class="col s2 l3">
+            <input name="headline" type="checkbox" id="box1" checked="checked">Business<br>
+            <input name="headline" type="checkbox" id="box2" checked="checked">Entertainment<br>
+            <input name="headline" type="checkbox" id="box3" checked="checked">Health<br>
+            <input name="headline" type="checkbox" id="box4" checked="checked">Politics<br>
+            <input name="headline" type="checkbox" id="box5" checked="checked">Science<br>
+            <input name="headline" type="checkbox" id="box6" checked="checked">Sports<br>
+            <a id="save9" type="button" class="btn btn-primary">Show results</a>
+        </div>
+        <div id="col2" class="col s8 l6">
+            <div class="title">My News</div>
+            <div id="news"></div>
+        </div>
+        <div id="col3" class="col s2 l3"></div>
+    </main>
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
                 <div id="scroll-to-top-container">
-                   
+
                 </div>
             </p>
             <p>myNEWS &copy;</p>
-
     </footer>
-    </body>
-    <script src="js/back-to-top.js"></script>
+</body>
+<!-- <script src="js/back-to-top.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </html>
