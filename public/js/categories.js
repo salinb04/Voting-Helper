@@ -2,7 +2,7 @@ $("#save").on("click", () => {
   const selected = $("input:checked");
   const categories = [];
 
-  selected.each(function() {
+  selected.each(function () {
     categories.push(this.name);
   });
 

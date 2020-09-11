@@ -17,6 +17,8 @@
 
     <!-- Custom styles for this template -->
     <link href="stylesheets/categories.css" rel="stylesheet">
+    <script src="./js/runapi.js"></script>
+
 </head>
 
 <body>
@@ -87,7 +89,8 @@
                                     <div class="btn-group" id="btn-hd">
                                         <div class="onoffswitch1">
                                             <label class="container">On
-                                                <input name="headline" type="checkbox" checked="checked">
+                                                <input name="headline" type="checkbox" id="box1" value="health"
+                                                    checked="checked">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -264,7 +267,7 @@
                     </div>
                 </div>
                 </p>
-                <button id="save" type="button" class="btn btn-primary">Save</button>
+                <a id="save" type="button" class="btn btn-primary" href="/success">Save</a>
             </div>
         </div>
 
@@ -275,7 +278,7 @@
         <div class="container">
             <p class="float-right">
                 <div id="scroll-to-top-container">
-                   
+
                 </div>
             </p>
             <p>myNEWS &copy;</p>
@@ -301,13 +304,13 @@
     <!-- <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script> -->
-    
-    <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
-  <!-- Load our React component. -->
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
 
     <script src="js/categories.js"></script>
     <script src="js/back-to-top.js"></script>
