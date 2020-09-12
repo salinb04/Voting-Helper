@@ -16,4 +16,4 @@ MIT
 
 
 ## **API**
-Bing News Search
+https://newsapi.org/
