@@ -3,6 +3,8 @@ const db = require("../models");
 const passport = require("../config/passport");
 const isAuthenticated = require("../config/middleware/isAuthenticated");
 
+const newsAPI = require("../utils/newsAPI");
+
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -67,6 +69,8 @@ module.exports = function(app) {
     if (!req.user) {
       res.json({});
     } else {
+      console.log(req.body.categories);
+      // DB Format for Category
       const categories = req.body.categories.map((category) => ({
         user_id: req.user.id,
         category,
@@ -74,7 +78,10 @@ module.exports = function(app) {
 
       db.Category.bulkCreate(categories)
         .then(() => res.redirect("/success"))
-        .catch(() => res.redirect("/categories"));
+        .catch((err) => {
+          res.redirect("/categories");
+          console.log(err);
+        });
     }
   });
 
@@ -82,11 +89,25 @@ module.exports = function(app) {
   app.get("/api/categories", (req, res) => {
     if (!req.user) {
       res.json({});
-    } else {
-      db.Category.findAll({ where: { user_id: 1 } }).then((result) =>
-        res.json(result)
-      );
     }
+
+    db.Category.findAll({ where: { user_id: req.user.id } }).then((result) =>
+      res.json(result)
+    );
+  });
+
+  app.get("/api/news", (req, res) => {
+    if (!req.user) {
+      res.json({});
+    }
+
+    db.Category.findAll({ where: { user_id: req.user.id } }).then(
+      async (result) => {
+        const categories = result.map((obj) => obj.category);
+        const userNews = await newsAPI.getNews(categories);
+        res.json(userNews);
+      }
+    );
   });
 
   app.use(function(req, res, next) {
