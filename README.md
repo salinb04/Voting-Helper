@@ -1,6 +1,6 @@
 
 # **MyNewsApp**
-[Website link](https://dashboard.heroku.com/apps/blooming-everglades-84355)
+[Website link](https://blooming-everglades-84355.herokuapp.com/login)
 
 
 ## **Project Description**
