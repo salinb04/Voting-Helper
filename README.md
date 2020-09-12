@@ -4,11 +4,11 @@
 
 
 ## **Project Description**
-After user login, they can choose up to 6 different categories and   select a time to receive newsletter by email.
+After a user creates an account and logs in, the user can choose up to 7 different categories of news that they can view in a simple, streamlined fashion.
 
 
 ## **User Story**
-As a user, I want to receive certain categories of news at the time I want. So that I can receive my customize newsletter everyday.
+As a user, I want to view certain categories of news articles that I selected all in one place, and in a clean and simple manner.
 
 
 ## **License**
